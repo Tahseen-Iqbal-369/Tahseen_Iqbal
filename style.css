@@ -1,0 +1,231 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400&display=swap");
+:root {
+  --peach: #fcedda;
+  --burnt-orange: #ee4e34;
+}
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "poppins", sans-serif;
+  background-color: #3d405b;
+  color: #3d405b;
+  scroll-behavior: smooth;
+}
+header {
+  background: #f2cc8f;
+  padding: 2rem;
+}
+nav {
+  display: flex;
+  justify-content: space-around;
+}
+.portfolio-title {
+  font-size: 3.5rem;
+  font-weight: 700;
+}
+.portfolio-title:hover {
+  font-style: italic;
+}
+nav ul {
+  display: flex;
+  gap: 1.2rem;
+  align-items: center;
+}
+nav li {
+  list-style: none;
+  font-size: 1.5rem;
+}
+nav i {
+  padding-right: 0.6rem;
+}
+nav a {
+  text-decoration: none;
+  color: #3d405b;
+}
+nav a:hover {
+  color: #ffffff;
+}
+nav i {
+  font-size: 2.5rem;
+}
+.text-area {
+  margin: 5rem 6rem 0 6rem;
+  border-radius: 13px;
+  background: #f4f1de;
+  box-shadow: inset 5px 5px 10px #adacac, inset -5px -5px 10px #ffffff;
+}
+.text {
+  font-size: 2rem;
+  padding: 3rem;
+}
+.text:hover {
+  font-style: italic;
+}
+
+#Projects h2 {
+  text-align: center;
+  font-size: 5rem;
+  font-weight: 700;
+  padding: 3rem;
+  color: #f2cc8f;
+}
+.card img {
+  width: 280px;
+  height: 300px;
+  border-radius: 0.5rem;
+}
+.project-container {
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  display: grid;
+  justify-items: center;
+  margin: 0 5rem 0 5rem;
+  background: #f4f1de;
+  padding-top: 5rem;
+  border-radius: 0.5rem;
+}
+.grid-item {
+  place-items: center;
+  display: grid;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  transition: 0.2s ease-in-out;
+}
+.card:hover {
+  transform: scale(1.05);
+  transition: 1s ease-in-out;
+  border: #adacac solid 0.3rem;
+  border-radius: 0.5rem;
+}
+.card:hover img {
+  transform: scale(1.05);
+  transition: 0.3s ease-in-out;
+  opacity: 0.8;
+}
+.card-content h3 {
+  margin: 2rem;
+  transition: 0.4s, ease-in-out;
+  border-bottom: 0.3rem transparent #ee4e34;
+  font-size: 2rem;
+  display: inline-block;
+}
+.card-content a{
+  text-decoration: none;
+  color: #3d405b;
+}
+.card-content h3:hover:after { transform: scaleX(1); }
+
+.card-content h3:after {
+  display:block;
+  content: '';
+  border-bottom: solid 3px #f2cc8f;  
+  transform: scaleX(0);  
+  transition: transform 250ms ease-in-out;
+}
+
+.contact-links i {
+  color: #ffffff;
+  font-size: 3rem;
+}
+.contact-links {
+  padding: 10rem;
+}
+#contact h2 {
+  color: #f2cc8f;
+  text-align: center;
+  font-size: 5rem;
+  font-weight: 700;
+  margin-bottom: -5rem;
+}
+#extra a {
+  display: flex;
+  gap: 6rem;
+  justify-content: center;
+  color: #ffffff;
+  font-size: 2rem;
+  text-decoration: none;
+}
+#contact {
+  margin-top: 2rem;
+}
+#contact svg {
+  margin-top: -20rem;
+}
+#contact h4 {
+  color: #ffffff;
+  text-align: center;
+  justify-content: center;
+  font-size: 1.5rem;
+}
+#extra1 {
+  border: #f2cc8f 3px solid;
+  margin: 0 49rem 0 49rem;
+  padding: 0.6rem;
+  margin-bottom: 2.5rem;
+  border-radius: 0.5rem;
+  display: flex;
+  gap: 6rem;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+}
+#extra {
+  border: #f2cc8f 3px solid;
+  padding: 0.6rem;
+  margin: 0 35rem 0 35rem;
+  margin-bottom: 2.5rem;
+  border-radius: 0.5rem;
+  display: flex;
+  gap: 6rem;
+}
+#extra2 {
+  border: #f2cc8f 3px solid;
+  padding: 0.6rem;
+  margin: 0 47rem 0 47rem;
+  border-radius: 0.5rem;
+  letter-spacing: 1px;
+}
+#extra1 i:hover {
+  color: #f2cc8f;
+}
+#extra a:hover {
+  color: #f2cc8f;
+}
+
+@media (max-width: 786px) {
+  html {
+    font-size: 40%;
+  }
+  #Projects .container {
+    flex-direction: column;
+  }
+  .card img {
+    display: grid;
+    place-items: center;
+  }
+  #contact .container {
+    height: 70vh;
+  }
+}
+@media (max-width: 500px) {
+  html {
+    font-size: 32%;
+  }
+  #Projects .container {
+    flex-direction: column;
+  }
+  .card img {
+    display: grid;
+    place-items: center;
+  }
+  #contact .container {
+    height: 50vh;
+  }
+}
